@@ -6,6 +6,8 @@ struct Body{
   std::string name;
   double mass;
   Vec2 pos;
+  Vec2 posPrev;
+  Vec2 velPrev;
   Vec2 vel;
   Vec2 acc;
 
@@ -14,7 +16,9 @@ struct Body{
     if(mass_ > 0) mass = mass_;
     else mass = 1;
     pos = pos_;
+    posPrev = pos;
     vel = vel_;
+    velPrev = vel;
     acc = acc_;
   }
 
@@ -28,10 +32,13 @@ struct Body{
   }
 
   void update(double dt){
-    vel.x = vel.x + acc.x*dt;
-    vel.y = vel.y + acc.y*dt;
+    vel.x = velPrev.x + acc.x*dt;
+    vel.y = velPrev.y + acc.y*dt;
 
-    pos.x = vel.x*dt + 0.5*acc.x*dt*dt;
-    pos.y = vel.y*dt + 0.5*acc.y*dt*dt;
+    pos.x = posPrev.x + velPrev.x*dt + 0.5*acc.x*dt*dt;
+    pos.y = posPrev.y + velPrev.y*dt + 0.5*acc.y*dt*dt;
+
+    velPrev = vel;
+    posPrev = pos;
   }
 };
