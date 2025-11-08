@@ -64,19 +64,6 @@ This avoids numerical instability while having negligible effect at larger dista
 
 ---
 
-## Project Structure
-
-```
-GravitySim/
-│
-├── vec2.hpp         # Defines 2D vector math utilities
-├── body.hpp         # Represents a celestial body (mass, pos, vel, acc)
-├── simulation.hpp   # Handles gravitational interaction and updates
-├── SunEarth.cpp     # Example: Earth orbiting the Sun
-└── README.md        # This file
-```
-
----
 
 ## Components
 
