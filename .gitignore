@@ -3,3 +3,30 @@
 *.obj
 *.exe
 *.pdb
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+ipch/
+
+# Build folders
+out/
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.ninja
+*.ilk
+*.pdb
+*.exe
+*.dll
+*.lib
+*.exp
+
+# Logs and temp
+*.log
+*.tmp
+*.cache

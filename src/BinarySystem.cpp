@@ -59,5 +59,7 @@ int main() {
         }
     }
 
+    std::cout << "Simulation done!" << std::endl;
+    system("pause");  // Waits for a keypress
     return 0;
 }

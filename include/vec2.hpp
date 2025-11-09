@@ -26,38 +26,38 @@ struct Vec2{
   }
 };
 
-Vec2 operator+(const Vec2& v1, const Vec2& v2){
+inline Vec2 operator+(const Vec2& v1, const Vec2& v2){
   Vec2 v3 = Vec2(v1.x + v2.x, v1.y + v2.y);
   return v3;
 }
 
-Vec2 operator-(const Vec2& v1, const Vec2& v2){
+inline Vec2 operator-(const Vec2& v1, const Vec2& v2){
   Vec2 v3 = Vec2(v1.x - v2.x, v1.y - v2.y);
   return v3;
 }
 
-Vec2 operator*(const Vec2& v, double scalar){
+inline Vec2 operator*(const Vec2& v, double scalar){
   Vec2 v3 = Vec2(v.x * scalar, v.y * scalar);
   return v3;
 }
-Vec2 operator*(double scalar, const Vec2& v){
+inline Vec2 operator*(double scalar, const Vec2& v){
   Vec2 v3 = Vec2(v.x * scalar, v.y * scalar);
   return v3;
 }
 
-Vec2 operator/(const Vec2& v, double scalar){
+inline Vec2 operator/(const Vec2& v, double scalar){
   Vec2 v3 = Vec2(v.x / scalar, v.y / scalar);
   return v3;
 }
-Vec2 operator/(double scalar, const Vec2& v){
+inline Vec2 operator/(double scalar, const Vec2& v){
   Vec2 v3 = Vec2(v.x / scalar, v.y / scalar);
   return v3;
 }
 
-Vec2 operator-(const Vec2& v){
+inline Vec2 operator-(const Vec2& v){
   return Vec2(-v.x, -v.y);
 }
 
-double dot(const Vec2& v1, const Vec2& v2){
+inline double dot(const Vec2& v1, const Vec2& v2){
   return (v1.x*v2.x + v1.y*v2.y);
 }
